@@ -4,13 +4,13 @@ func lengthOfLongestSubstring(s string) int {
 	n := len(s)
 	left, right := 0, 0
 	ans := 0
-	countMap := make(map[byte]int)
+	countMap := make(map[byte]interface{})
 	for right < n {
 		// 当前字符出现过 要从左侧收缩
 		for {
-			if v, ok := countMap[s[right]]; ok {
+			if _, ok := countMap[s[right]]; ok {
 				delete(countMap, s[left])
-				left = 
+				left++
 			} else {
 				break
 			}
