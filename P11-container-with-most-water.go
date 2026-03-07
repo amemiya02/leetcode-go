@@ -1,4 +1,8 @@
-package twopointer
+//go:build ignore
+
+package main
+
+import "fmt"
 
 func maxArea(height []int) int {
 
@@ -31,4 +35,15 @@ func maxArea(height []int) int {
 
 	return ans
 
+}
+
+func main() {
+
+	n := 0
+	fmt.Scanf("%d", &n)
+	height := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scanf("%d", &height[i])
+	}
+	fmt.Println(maxArea(height))
 }

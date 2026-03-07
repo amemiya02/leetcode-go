@@ -1,4 +1,8 @@
-package slidingwindow
+//go:build ignore
+
+package main
+
+import "fmt"
 
 func lengthOfLongestSubstring(s string) int {
 	n := len(s)
@@ -23,4 +27,10 @@ func lengthOfLongestSubstring(s string) int {
 
 	}
 	return ans
+}
+
+func main() {
+	s := ""
+	fmt.Scanf("%s", &s)
+	fmt.Println(lengthOfLongestSubstring(s))
 }
